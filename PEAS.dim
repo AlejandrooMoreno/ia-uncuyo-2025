@@ -1,0 +1,20 @@
+1. 
+a. Jugar al CS: 
+  Performance Measure: ganar la ronda, número de enemigos eliminados, muertes, asistencias, dinero, resultados de ronda.
+  Entorno: mapa, paredes, enemigos, aliados, objetos.
+  Actuadores: moverse, disparar, eliminar enemigos, tirar granadas, comprar objetos. 
+  Sensores: visión en primera persona, minimapa, vida, cargador disponible, armas disponibles, dinero, sonidos.
+  Tipo de Entorno: 
+    Parcialmente observable
+    Multi agente
+    Estocástico
+    Conocido
+    Dinámico
+    Continuo
+    Secuencial
+
+b. Explorar océanos:
+  Performance measure:  costo, medida de exploración.
+  Entorno: agua, peces, plantas. 
+  Actuadores: Nadar, interactuar con peces y plantas.
+  Sensores: 
