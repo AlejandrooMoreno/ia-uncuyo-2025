@@ -16,5 +16,20 @@ a. Jugar al CS:
 b. Explorar océanos:
   Performance measure:  costo, medida de exploración.
   Entorno: agua, peces, plantas. 
-  Actuadores: Nadar, interactuar con peces y plantas.
-  Sensores: 
+  Actuadores: Nadar, navegar, interactuar con peces y plantas.
+  Sensores: giroscopio, dvl, ins, ctd, camaras, sensores de pH, de oxígeno disuelto, de turbidez, sonar, etc.
+  Tipo de Entorno:
+    Parcialmente observable
+    Multi agente
+    Estocástico
+    Desconocido
+    Dinámico
+    Continuo
+    Secuencial
+
+c. Comprar y vender tokens crypto
+  Performance:
+  Entorno:
+  Actuadores:
+  Sensores:
+  Tipo de Entorno:
