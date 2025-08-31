@@ -1,0 +1,5 @@
+En los gráficos se puede ver la diferencia en el porcentaje de limpieza y en la cantidad de acciones que les tomó tanto al agente reflexivo simple como al agente aleatorio en un escenario de 8x8 con un 80% de suciedad. 
+
+Recordemos la diferencia entre ambos agentes. El agente aleatorio siempre toma una decisión aleatoria, la cual puede ser: moverse a la derecha, izquierda, arriba, abajo, limpiar o quedarse quieto. Mientras que el agente reflexivo simple toma una decisión aleatoria para moverse, la cual puede ser: moverse hacia arriba, abajo, a la derecha o a la izquierda. Pero si este mismo se encuentra sobre un casillero sucio, lo limpia. 
+
+Los gráficos muestran la tendencia de ver que siempre el agente reflexivo simple es más eficiente en cuanto a porcentaje de limpieza, siempre y cuando al agente aleatorio se lo ponga en el mismo escenario. 
