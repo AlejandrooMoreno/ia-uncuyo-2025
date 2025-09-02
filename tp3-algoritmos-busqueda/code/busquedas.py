@@ -61,34 +61,40 @@ def random_search(start, goal):
             print(f"¿Frenó? (alcanzó el máximo de pasos posible): " + truncated)
         else:
             print(f"¿Ganó? (encontró el objetivo): {done}")
+            return acciones + 1, acciones, costo
         state = next_state
+    return None, None, None
 
 def bfs_search(start, goal):
-    env = generate_random_map_custom_start_goal(100, 0.92, start, goal)
+    env = generate_random_map_custom_start_goal(10, 0.92, start, goal)
     env.unwrapped.s = start
     visited = set()
     queue = deque()
-    queue.append((start, [start]))  # (estado actual, camino hasta aquí)
+    queue.append((start, [start], 0))  # (estado actual, camino hasta aquí)
     visited.add(start)
-
+    info = env.reset()
     while queue:
-        current_state, path = queue.popleft()
+        current_state, path, costo = queue.popleft()
         if current_state == goal:
             print(f"Camino encontrado: {path}")
-            return path
+            return len(path), len(path) - 1, costo
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
             next_state, reward, done, _, _ = env.step(action)
             # Evitar casilleros 'H' (Hole)
             if next_state not in visited and env.unwrapped.desc.flatten()[next_state] != b'H':
+                if action == 0 or action == 2:
+                    costo += 1
+                else:
+                    costo += 10
                 visited.add(next_state)
-                queue.append((next_state, path + [next_state]))
+                queue.append((next_state, path + [next_state], costo))
     print("No se encontró camino al objetivo.")
-    return None
+    return None, None, None
 
 def main():
-    random_search(5, 100)
-    bfs_search(5, 100)
+    #random_search(5, 100)
+    bfs_search(5, 80)
 
 if __name__ == "__main__":
     main()
