@@ -5,12 +5,18 @@ def generate_random_map_custom(size, frozen_prob):
     import random
     desc = [['' for _ in range(size)] for _ in range(size)]
 
+
     # Ubicar aleatoriamente la posición inicial del agente y del objetivo
     positions = [(i, j) for i in range(size) for j in range(size)]
     start_pos = random.choice(positions)
     positions.remove(start_pos)
     goal_pos = random.choice(positions)
     positions.remove(goal_pos)
+
+    # Convertir las posiciones a enteros
+    start_idx = start_pos[0] * size + start_pos[1]
+    goal_idx = goal_pos[0] * size + goal_pos[1]
+
 
     for i in range(size):
         for j in range(size):
@@ -23,5 +29,6 @@ def generate_random_map_custom(size, frozen_prob):
 
     # Convertir a lista de strings
     desc = [''.join(row) for row in desc]
-    return gym.make('FrozenLake-v1', desc = desc, render_mode='human').env
+    env = gym.make('FrozenLake-v1', desc = desc, render_mode='human').env
+    return env, start_idx, goal_idx
 
