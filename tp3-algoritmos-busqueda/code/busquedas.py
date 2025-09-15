@@ -169,10 +169,97 @@ def uniform_cost_search(env, start, goal):
     print("No se encontró camino al objetivo.")
     return None, None, None
 
+def a_star_search_1(env, start, goal):
+    def heuristic(state, goal):
+        x1, y1 = divmod(state, env.unwrapped.ncol)
+        x2, y2 = divmod(goal, env.unwrapped.ncol)
+        return abs(x1 - x2) + abs(y1 - y2)
+
+    env.unwrapped.s = start
+    costos = {start: 0}
+    heap = []
+    heapq.heappush(heap, (heuristic(start, goal), 0, start, [start]))
+    visited = set()
+    estados_explorados = 0
+
+    while heap:
+        f, g, current_state, path = heapq.heappop(heap)
+
+        if current_state in visited:
+            continue
+        visited.add(current_state)
+        estados_explorados += 1
+
+        if current_state == goal:
+            print(f"Camino encontrado: {path}")
+            return estados_explorados, len(path) - 1, g
+
+        for action in range(env.action_space.n):
+            env.unwrapped.s = current_state
+            next_state, _, _, _, _ = env.step(action)
+
+            if env.unwrapped.desc.flatten()[next_state] == b'H':  # Hielo => hueco, ignorar
+                continue
+
+            new_g = g + 1
+            if new_g < costos.get(next_state, float('inf')):
+                costos[next_state] = new_g
+                new_f = new_g + heuristic(next_state, goal)
+                heapq.heappush(heap, (new_f, new_g, next_state, path + [next_state]))
+
+    print("No se encontró camino al objetivo.")
+    return None, None, None
+
+def a_star_search_2(env, start, goal):
+    def heuristic(state, goal):
+        x1, y1 = divmod(state, env.unwrapped.ncol)
+        x2, y2 = divmod(goal, env.unwrapped.ncol)
+        return abs(x1 - x2) * 10 + abs(y1 - y2)
+
+    env.unwrapped.s = start
+    costos = {start: 0}
+    heap = []
+    heapq.heappush(heap, (heuristic(start, goal), 0, start, [start]))
+    visited = set()
+    estados_explorados = 0
+
+    while heap:
+        f, g, current_state, path = heapq.heappop(heap)
+
+        if current_state in visited:
+            continue
+        visited.add(current_state)
+        estados_explorados += 1
+
+        if current_state == goal:
+            print(f"Camino encontrado: {path}")
+            return estados_explorados, len(path) - 1, g
+
+        for action in range(env.action_space.n):
+            env.unwrapped.s = current_state
+            next_state, _, _, _, _ = env.step(action)
+
+            if env.unwrapped.desc.flatten()[next_state] == b'H':  # Hielo => hueco, ignorar
+                continue
+
+            if action == 0 or action == 2:
+                new_g = g + 1
+            else: 
+                new_g = g + 10
+                
+            if new_g < costos.get(next_state, float('inf')):
+                costos[next_state] = new_g
+                new_f = new_g + heuristic(next_state, goal)
+                heapq.heappush(heap, (new_f, new_g, next_state, path + [next_state]))
+
+    print("No se encontró camino al objetivo.")
+    return None, None, None
+
 def main():
     env, start, goal = deterministic_random_100_environment()
     #random_search(env, start, goal)
-    bfs_search(env, start, goal)
+    #bfs_search(env, start, goal)
+    _, _, _ = uniform_cost_search(env, start, goal)
 
 if __name__ == "__main__":
     main()
