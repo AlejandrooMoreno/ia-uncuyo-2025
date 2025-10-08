@@ -1,0 +1,9 @@
+Considero que el mejor algoritmo para resolver n-reinas, teniendo en cuenta los resultados obtenidos, y la cantidad máxima preestablecida de estados explorados, es Hill Climbing. Obviamente, teniendo en cuenta la forma en la que hice el algoritmo genético, ya que resolviéndolo de otra manera o con un número mayor de máximos estados explorados, éste hubiera sido el más efectivo. 
+
+Guíandonos por los resultados vistos, el mejor es Hill Climbing. Viendo H_metrics, para n = 4 se queda con el tercer lugar, pero para n = 8, 10, este es el mejor en cuanto a promedio de heurística. 
+
+No solo en promedio de H, sino que si vemos states_metrics, vemos que es el que tiene menor promedio de estados explorados.
+
+También gana, y con diferencia, en tiempo de ejecución promedio, visto en time_metrics. 
+
+Viendo success_metrics es donde podemos ponernos a analizar más profundamente. El lado malo de este algoritmo lo vemos en n = 4, donde HC logró obtener una solución óptima en el 40% de los casos, siendo éste algoritmo el peor en cuanto a encontrar soluciones óptimas se refiere. Sin embargo, la sorpresa en n = 4 la dio el algoritmo random, quedandose con el primer puesto. Ahora bien, el lado bueno del algoritmo de Hill Climbing es que fue el ÚNICO en ser capaz de encontrar soluciones óptimas tanto en n = 8 como en n = 10. Esto gracias a lo visto anteriormente, es el algoritmo más rápido y el que menor cantidad de estados explora. Sin embargo, si hubiéramos aumentado la cantidad máxima de estados a explorar, seguramente veríamos como HC caería al tercer lugar (debido a que se suele atascar en mínimos/máximos locales), por delante del random, que si bien, sorprendentemente, había conseguido el primer lugar en n = 4, siempre los algoritmos random tienden a no encontrar soluciones en entornos más grandes.

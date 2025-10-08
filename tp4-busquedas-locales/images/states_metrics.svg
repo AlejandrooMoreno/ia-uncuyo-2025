@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="520" viewBox="0 0 840 520">
+<style>text { font-family: Arial, sans-serif; }</style>
+<text x="420.0" y="40" text-anchor="middle" font-size="22" font-weight="bold">Estados explorados</text>
+<rect x="100" y="80" width="680" height="360" fill="#ffffff" stroke="#333333" stroke-width="1" />
+<text x="440.0" y="68" text-anchor="middle" font-size="16" font-weight="bold">Cantidad de estados promedio con desviación estándar</text>
+<text x="55" y="260.0" transform="rotate(-90 55,260.0)" text-anchor="middle" font-size="14">Cantidad de estados</text>
+<line x1="100" y1="440.0" x2="780" y2="440.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="444.0" text-anchor="end" font-size="12">0.00</text>
+<line x1="100" y1="368.0" x2="780" y2="368.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="372.0" text-anchor="end" font-size="12">160.00</text>
+<line x1="100" y1="296.0" x2="780" y2="296.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="300.0" text-anchor="end" font-size="12">320.00</text>
+<line x1="100" y1="224.0" x2="780" y2="224.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="228.0" text-anchor="end" font-size="12">480.00</text>
+<line x1="100" y1="152.0" x2="780" y2="152.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="156.0" text-anchor="end" font-size="12">640.00</text>
+<line x1="100" y1="80.0" x2="780" y2="80.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="84.0" text-anchor="end" font-size="12">800.00</text>
+<text x="213.33333333333331" y="458" text-anchor="middle" font-size="13">n = 4</text>
+<rect x="122.66666666666666" y="401.6" width="45.333333333333336" height="38.39999999999998" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="145.33333333333331" y1="383.92992008682666" x2="145.33333333333331" y2="419.27007991317333" stroke="#000000" stroke-width="1.5" />
+<line x1="131.73333333333332" y1="383.92992008682666" x2="158.9333333333333" y2="383.92992008682666" stroke="#000000" stroke-width="1.5" />
+<line x1="131.73333333333332" y1="419.27007991317333" x2="158.9333333333333" y2="419.27007991317333" stroke="#000000" stroke-width="1.5" />
+<rect x="168.0" y="427.13" width="45.333333333333336" height="12.870000000000005" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="190.66666666666666" y1="423.91179746035044" x2="190.66666666666666" y2="430.34820253964955" stroke="#000000" stroke-width="1.5" />
+<line x1="177.06666666666666" y1="423.91179746035044" x2="204.26666666666665" y2="423.91179746035044" stroke="#000000" stroke-width="1.5" />
+<line x1="177.06666666666666" y1="430.34820253964955" x2="204.26666666666665" y2="430.34820253964955" stroke="#000000" stroke-width="1.5" />
+<rect x="213.33333333333331" y="397.44500000000005" width="45.333333333333336" height="42.55499999999995" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="235.99999999999997" y1="379.83851926723844" x2="235.99999999999997" y2="415.05148073276155" stroke="#000000" stroke-width="1.5" />
+<line x1="222.39999999999998" y1="379.83851926723844" x2="249.59999999999997" y2="379.83851926723844" stroke="#000000" stroke-width="1.5" />
+<line x1="222.39999999999998" y1="415.05148073276155" x2="249.59999999999997" y2="415.05148073276155" stroke="#000000" stroke-width="1.5" />
+<rect x="258.66666666666663" y="401.465" width="45.333333333333336" height="38.535000000000025" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="281.3333333333333" y1="382.9688906700672" x2="281.3333333333333" y2="419.9611093299328" stroke="#000000" stroke-width="1.5" />
+<line x1="267.7333333333333" y1="382.9688906700672" x2="294.93333333333334" y2="382.9688906700672" stroke="#000000" stroke-width="1.5" />
+<line x1="267.7333333333333" y1="419.9611093299328" x2="294.93333333333334" y2="419.9611093299328" stroke="#000000" stroke-width="1.5" />
+<text x="439.99999999999994" y="458" text-anchor="middle" font-size="13">n = 8</text>
+<rect x="349.33333333333326" y="209.6" width="45.333333333333336" height="230.4" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="394.6666666666666" y="334.55" width="45.333333333333336" height="105.44999999999999" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="417.33333333333326" y1="311.54565258478306" x2="417.33333333333326" y2="357.55434741521697" stroke="#000000" stroke-width="1.5" />
+<line x1="403.73333333333323" y1="311.54565258478306" x2="430.9333333333333" y2="311.54565258478306" stroke="#000000" stroke-width="1.5" />
+<line x1="403.73333333333323" y1="357.55434741521697" x2="430.9333333333333" y2="357.55434741521697" stroke="#000000" stroke-width="1.5" />
+<rect x="439.99999999999994" y="209.6" width="45.333333333333336" height="230.4" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="485.33333333333326" y="209.6" width="45.333333333333336" height="230.4" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="666.6666666666665" y="458" text-anchor="middle" font-size="13">n = 10</text>
+<rect x="575.9999999999999" y="80.0" width="45.333333333333336" height="360.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="621.3333333333333" y="237.05" width="45.333333333333336" height="202.95" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<line x1="643.9999999999999" y1="195.85764215503576" x2="643.9999999999999" y2="278.2423578449642" stroke="#000000" stroke-width="1.5" />
+<line x1="630.3999999999999" y1="195.85764215503576" x2="657.5999999999999" y2="195.85764215503576" stroke="#000000" stroke-width="1.5" />
+<line x1="630.3999999999999" y1="278.2423578449642" x2="657.5999999999999" y2="278.2423578449642" stroke="#000000" stroke-width="1.5" />
+<rect x="666.6666666666665" y="129.95" width="45.333333333333336" height="310.05" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="711.9999999999999" y="80.0" width="45.333333333333336" height="360.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="100" y="450" font-size="14" font-weight="bold">Algoritmos</text>
+<rect x="100" y="460" width="14" height="14" fill="#8e24aa" stroke="#222" stroke-width="1" />
+<text x="120" y="472" font-size="13">GA</text>
+<rect x="210" y="460" width="14" height="14" fill="#1e88e5" stroke="#222" stroke-width="1" />
+<text x="230" y="472" font-size="13">HC</text>
+<rect x="320" y="460" width="14" height="14" fill="#fdd835" stroke="#222" stroke-width="1" />
+<text x="340" y="472" font-size="13">SA</text>
+<rect x="430" y="460" width="14" height="14" fill="#66bb6a" stroke="#222" stroke-width="1" />
+<text x="450" y="472" font-size="13">random</text>
+</svg>

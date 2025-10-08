@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="640" viewBox="0 0 840 640">
+<style>text { font-family: Arial, sans-serif; }</style>
+<text x="420.0" y="40" text-anchor="middle" font-size="22" font-weight="bold">Porcentaje de soluciones óptimas</text>
+<rect x="100" y="80" width="680" height="210.0" fill="#ffffff" stroke="#333333" stroke-width="1" />
+<text x="440.0" y="68" text-anchor="middle" font-size="16" font-weight="bold">Promedio de soluciones óptimas</text>
+<text x="55" y="185.0" transform="rotate(-90 55,185.0)" text-anchor="middle" font-size="14">% de corridas con H=0</text>
+<line x1="100" y1="290.0" x2="780" y2="290.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="294.0" text-anchor="end" font-size="12">0.00</text>
+<line x1="100" y1="248.0" x2="780" y2="248.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="252.0" text-anchor="end" font-size="12">20.00</text>
+<line x1="100" y1="206.0" x2="780" y2="206.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="210.0" text-anchor="end" font-size="12">40.00</text>
+<line x1="100" y1="164.0" x2="780" y2="164.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="168.0" text-anchor="end" font-size="12">60.00</text>
+<line x1="100" y1="122.0" x2="780" y2="122.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="126.0" text-anchor="end" font-size="12">80.00</text>
+<line x1="100" y1="80.0" x2="780" y2="80.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="84.0" text-anchor="end" font-size="12">100.00</text>
+<text x="213.33333333333331" y="308.0" text-anchor="middle" font-size="13">n = 4</text>
+<rect x="122.66666666666666" y="157.0" width="45.333333333333336" height="133.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="168.0" y="206.0" width="45.333333333333336" height="84.0" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="213.33333333333331" y="171.0" width="45.333333333333336" height="119.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="258.66666666666663" y="143.0" width="45.333333333333336" height="147.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="439.99999999999994" y="308.0" text-anchor="middle" font-size="13">n = 8</text>
+<rect x="349.33333333333326" y="290.0" width="45.333333333333336" height="0.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="394.6666666666666" y="248.0" width="45.333333333333336" height="42.0" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="439.99999999999994" y="290.0" width="45.333333333333336" height="0.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="485.33333333333326" y="290.0" width="45.333333333333336" height="0.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="666.6666666666665" y="308.0" text-anchor="middle" font-size="13">n = 10</text>
+<rect x="575.9999999999999" y="290.0" width="45.333333333333336" height="0.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="621.3333333333333" y="283.0" width="45.333333333333336" height="7.0" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="666.6666666666665" y="290.0" width="45.333333333333336" height="0.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="711.9999999999999" y="290.0" width="45.333333333333336" height="0.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="100" y="350.0" width="680" height="210.0" fill="#ffffff" stroke="#333333" stroke-width="1" />
+<text x="440.0" y="338.0" text-anchor="middle" font-size="16" font-weight="bold">Desvío estándar del porcentaje</text>
+<text x="55" y="455.0" transform="rotate(-90 55,455.0)" text-anchor="middle" font-size="14">Desvío estándar (%)</text>
+<line x1="100" y1="560.0" x2="780" y2="560.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="564.0" text-anchor="end" font-size="12">0.00</text>
+<line x1="100" y1="518.0005777415302" x2="780" y2="518.0005777415302" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="522.0005777415302" text-anchor="end" font-size="12">10.08</text>
+<line x1="100" y1="476.0011554830604" x2="780" y2="476.0011554830604" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="480.0011554830604" text-anchor="end" font-size="12">20.16</text>
+<line x1="100" y1="434.00173322459057" x2="780" y2="434.00173322459057" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="438.00173322459057" text-anchor="end" font-size="12">30.24</text>
+<line x1="100" y1="392.0023109661208" x2="780" y2="392.0023109661208" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="396.0023109661208" text-anchor="end" font-size="12">40.32</text>
+<line x1="100" y1="350.002888707651" x2="780" y2="350.002888707651" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="90" y="354.002888707651" text-anchor="end" font-size="12">50.40</text>
+<text x="213.33333333333331" y="578.0" text-anchor="middle" font-size="13">n = 4</text>
+<rect x="122.66666666666666" y="355.7809267863224" width="45.333333333333336" height="204.21907321367758" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="168.0" y="352.3891562479481" width="45.333333333333336" height="207.6108437520519" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="213.33333333333331" y="350.0" width="45.333333333333336" height="210.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="258.66666666666663" y="365.7978382251911" width="45.333333333333336" height="194.20216177480893" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="439.99999999999994" y="578.0" text-anchor="middle" font-size="13">n = 8</text>
+<rect x="349.33333333333326" y="560.0" width="45.333333333333336" height="0.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="394.6666666666666" y="390.4864559129293" width="45.333333333333336" height="169.51354408707073" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="439.99999999999994" y="560.0" width="45.333333333333336" height="0.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="485.33333333333326" y="560.0" width="45.333333333333336" height="0.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="666.6666666666665" y="578.0" text-anchor="middle" font-size="13">n = 10</text>
+<rect x="575.9999999999999" y="560.0" width="45.333333333333336" height="0.0" fill="#8e24aa" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="621.3333333333333" y="483.9284690041386" width="45.333333333333336" height="76.0715309958614" fill="#1e88e5" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="666.6666666666665" y="560.0" width="45.333333333333336" height="0.0" fill="#fdd835" opacity="0.8" stroke="#222222" stroke-width="1" />
+<rect x="711.9999999999999" y="560.0" width="45.333333333333336" height="0.0" fill="#66bb6a" opacity="0.8" stroke="#222222" stroke-width="1" />
+<text x="100" y="570" font-size="14" font-weight="bold">Algoritmos</text>
+<rect x="100" y="580" width="14" height="14" fill="#8e24aa" stroke="#222" stroke-width="1" />
+<text x="120" y="592" font-size="13">GA</text>
+<rect x="210" y="580" width="14" height="14" fill="#1e88e5" stroke="#222" stroke-width="1" />
+<text x="230" y="592" font-size="13">HC</text>
+<rect x="320" y="580" width="14" height="14" fill="#fdd835" stroke="#222" stroke-width="1" />
+<text x="340" y="592" font-size="13">SA</text>
+<rect x="430" y="580" width="14" height="14" fill="#66bb6a" stroke="#222" stroke-width="1" />
+<text x="450" y="592" font-size="13">random</text>
+</svg>

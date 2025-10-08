@@ -29,6 +29,6 @@ def generate_random_map_custom(size, frozen_prob):
 
     # Convertir a lista de strings
     desc = [''.join(row) for row in desc]
-    env = gym.make('FrozenLake-v1', desc = desc, render_mode='human').env
+    env = gym.make('FrozenLake-v1', desc = desc).env
     return env, start_idx, goal_idx
 

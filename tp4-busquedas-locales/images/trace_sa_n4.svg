@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520">
+<style>text { font-family: Arial, sans-serif; }</style>
+<text x="410.0" y="36" text-anchor="middle" font-size="22" font-weight="bold">SA — variación de H (n = 4)</text>
+<rect x="90" y="70" width="690" height="380" fill="#ffffff" stroke="#333333" stroke-width="1" />
+<text x="435.0" y="490" text-anchor="middle" font-size="14">Iteraciones</text>
+<text x="40" y="260.0" transform="rotate(-90 40,260.0)" text-anchor="middle" font-size="14">Valor de H</text>
+<line x1="90" y1="450.0" x2="780" y2="450.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="455.0" text-anchor="end" font-size="12">1.00</text>
+<line x1="90" y1="374.0" x2="780" y2="374.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="379.0" text-anchor="end" font-size="12">2.00</text>
+<line x1="90" y1="298.0" x2="780" y2="298.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="303.0" text-anchor="end" font-size="12">3.00</text>
+<line x1="90" y1="222.0" x2="780" y2="222.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="227.0" text-anchor="end" font-size="12">4.00</text>
+<line x1="90" y1="146.0" x2="780" y2="146.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="151.0" text-anchor="end" font-size="12">5.00</text>
+<line x1="90" y1="70.0" x2="780" y2="70.0" stroke="#dddddd" stroke-dasharray="4 4" />
+<text x="80" y="75.0" text-anchor="end" font-size="12">6.00</text>
+<polyline points="90.0,374.0 95.43307086614173,222.0 100.86614173228347,222.0 106.2992125984252,146.0 111.73228346456693,222.0 117.16535433070867,222.0 122.5984251968504,374.0 128.03149606299212,222.0 133.46456692913387,146.0 138.89763779527559,374.0 144.33070866141733,374.0 149.76377952755905,450.0 155.1968503937008,374.0 160.62992125984252,374.0 166.06299212598424,222.0 171.49606299212599,298.0 176.92913385826773,222.0 182.36220472440945,146.0 187.79527559055117,298.0 193.22834645669292,374.0 198.66141732283467,298.0 204.09448818897638,222.0 209.5275590551181,298.0 214.96062992125985,222.0 220.39370078740157,374.0 225.82677165354332,222.0 231.25984251968504,146.0 236.69291338582678,222.0 242.1259842519685,374.0 247.55905511811025,222.0 252.99212598425197,374.0 258.4251968503937,374.0 263.85826771653547,374.0 269.29133858267716,222.0 274.7244094488189,298.0 280.1574803149606,298.0 285.59055118110234,222.0 291.0236220472441,146.0 296.45669291338584,298.0 301.8897637795276,146.0 307.32283464566933,146.0 312.755905511811,146.0 318.18897637795277,298.0 323.62204724409446,374.0 329.0551181102362,374.0 334.48818897637796,298.0 339.9212598425197,222.0 345.35433070866145,222.0 350.78740157480314,374.0 356.2204724409449,298.0 361.65354330708664,374.0 367.0866141732283,374.0 372.5196850393701,450.0 377.9527559055118,298.0 383.38582677165357,146.0 388.81889763779526,70.0 394.251968503937,222.0 399.68503937007875,70.0 405.1181102362205,222.0 410.5511811023622,222.0 415.98425196850394,70.0 421.4173228346457,222.0 426.85039370078744,222.0 432.2834645669291,374.0 437.7165354330709,222.0 443.1496062992126,222.0 448.5826771653543,146.0 454.01574803149606,298.0 459.4488188976378,146.0 464.88188976377955,374.0 470.31496062992125,298.0 475.748031496063,146.0 481.18110236220474,374.0 486.6141732283465,298.0 492.0472440944882,374.0 497.4803149606299,146.0 502.9133858267717,146.0 508.3464566929134,374.0 513.7795275590552,222.0 519.2125984251968,298.0 524.6456692913387,222.0 530.0787401574803,146.0 535.511811023622,146.0 540.9448818897638,298.0 546.3779527559055,222.0 551.8110236220473,374.0 557.2440944881889,298.0 562.6771653543308,222.0 568.1102362204724,222.0 573.5433070866142,222.0 578.9763779527559,222.0 584.4094488188977,222.0 589.8425196850394,374.0 595.275590551181,374.0 600.7086614173229,374.0 606.1417322834645,374.0 611.5748031496063,374.0 617.007874015748,298.0 622.4409448818898,298.0 627.8740157480315,450.0 633.3070866141733,374.0 638.740157480315,374.0 644.1732283464567,222.0 649.6062992125984,222.0 655.0393700787401,222.0 660.4724409448819,298.0 665.9055118110236,374.0 671.3385826771654,222.0 676.7716535433071,146.0 682.2047244094489,222.0 687.6377952755905,298.0 693.0708661417323,222.0 698.503937007874,146.0 703.9370078740158,146.0 709.3700787401575,222.0 714.8031496062993,222.0 720.236220472441,70.0 725.6692913385826,222.0 731.1023622047244,298.0 736.5354330708661,146.0 741.9685039370079,298.0 747.4015748031496,374.0 752.8346456692914,298.0 758.2677165354331,450.0 763.7007874015749,374.0 769.1338582677165,374.0 774.5669291338583,222.0 780.0,374.0" fill="none" stroke="#fdd835" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="90.0" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="90.0" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="95.43307086614173" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="95.43307086614173" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="100.86614173228347" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="100.86614173228347" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="106.2992125984252" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="106.2992125984252" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="111.73228346456693" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="111.73228346456693" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="117.16535433070867" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="117.16535433070867" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="122.5984251968504" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="122.5984251968504" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="128.03149606299212" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="128.03149606299212" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="133.46456692913387" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="133.46456692913387" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="138.89763779527559" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="138.89763779527559" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="144.33070866141733" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="144.33070866141733" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="149.76377952755905" cy="450.0" r="3.5" fill="#fdd835" />
+<text x="149.76377952755905" y="442.0" text-anchor="middle" font-size="11">1.00</text>
+<circle cx="155.1968503937008" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="155.1968503937008" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="160.62992125984252" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="160.62992125984252" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="166.06299212598424" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="166.06299212598424" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="171.49606299212599" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="171.49606299212599" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="176.92913385826773" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="176.92913385826773" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="182.36220472440945" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="182.36220472440945" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="187.79527559055117" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="187.79527559055117" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="193.22834645669292" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="193.22834645669292" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="198.66141732283467" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="198.66141732283467" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="204.09448818897638" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="204.09448818897638" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="209.5275590551181" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="209.5275590551181" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="214.96062992125985" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="214.96062992125985" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="220.39370078740157" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="220.39370078740157" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="225.82677165354332" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="225.82677165354332" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="231.25984251968504" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="231.25984251968504" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="236.69291338582678" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="236.69291338582678" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="242.1259842519685" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="242.1259842519685" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="247.55905511811025" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="247.55905511811025" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="252.99212598425197" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="252.99212598425197" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="258.4251968503937" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="258.4251968503937" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="263.85826771653547" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="263.85826771653547" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="269.29133858267716" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="269.29133858267716" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="274.7244094488189" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="274.7244094488189" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="280.1574803149606" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="280.1574803149606" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="285.59055118110234" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="285.59055118110234" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="291.0236220472441" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="291.0236220472441" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="296.45669291338584" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="296.45669291338584" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="301.8897637795276" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="301.8897637795276" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="307.32283464566933" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="307.32283464566933" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="312.755905511811" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="312.755905511811" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="318.18897637795277" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="318.18897637795277" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="323.62204724409446" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="323.62204724409446" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="329.0551181102362" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="329.0551181102362" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="334.48818897637796" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="334.48818897637796" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="339.9212598425197" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="339.9212598425197" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="345.35433070866145" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="345.35433070866145" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="350.78740157480314" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="350.78740157480314" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="356.2204724409449" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="356.2204724409449" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="361.65354330708664" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="361.65354330708664" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="367.0866141732283" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="367.0866141732283" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="372.5196850393701" cy="450.0" r="3.5" fill="#fdd835" />
+<text x="372.5196850393701" y="442.0" text-anchor="middle" font-size="11">1.00</text>
+<circle cx="377.9527559055118" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="377.9527559055118" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="383.38582677165357" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="383.38582677165357" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="388.81889763779526" cy="70.0" r="3.5" fill="#fdd835" />
+<text x="388.81889763779526" y="62.0" text-anchor="middle" font-size="11">6.00</text>
+<circle cx="394.251968503937" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="394.251968503937" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="399.68503937007875" cy="70.0" r="3.5" fill="#fdd835" />
+<text x="399.68503937007875" y="62.0" text-anchor="middle" font-size="11">6.00</text>
+<circle cx="405.1181102362205" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="405.1181102362205" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="410.5511811023622" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="410.5511811023622" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="415.98425196850394" cy="70.0" r="3.5" fill="#fdd835" />
+<text x="415.98425196850394" y="62.0" text-anchor="middle" font-size="11">6.00</text>
+<circle cx="421.4173228346457" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="421.4173228346457" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="426.85039370078744" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="426.85039370078744" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="432.2834645669291" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="432.2834645669291" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="437.7165354330709" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="437.7165354330709" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="443.1496062992126" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="443.1496062992126" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="448.5826771653543" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="448.5826771653543" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="454.01574803149606" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="454.01574803149606" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="459.4488188976378" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="459.4488188976378" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="464.88188976377955" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="464.88188976377955" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="470.31496062992125" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="470.31496062992125" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="475.748031496063" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="475.748031496063" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="481.18110236220474" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="481.18110236220474" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="486.6141732283465" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="486.6141732283465" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="492.0472440944882" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="492.0472440944882" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="497.4803149606299" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="497.4803149606299" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="502.9133858267717" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="502.9133858267717" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="508.3464566929134" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="508.3464566929134" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="513.7795275590552" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="513.7795275590552" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="519.2125984251968" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="519.2125984251968" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="524.6456692913387" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="524.6456692913387" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="530.0787401574803" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="530.0787401574803" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="535.511811023622" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="535.511811023622" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="540.9448818897638" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="540.9448818897638" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="546.3779527559055" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="546.3779527559055" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="551.8110236220473" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="551.8110236220473" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="557.2440944881889" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="557.2440944881889" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="562.6771653543308" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="562.6771653543308" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="568.1102362204724" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="568.1102362204724" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="573.5433070866142" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="573.5433070866142" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="578.9763779527559" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="578.9763779527559" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="584.4094488188977" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="584.4094488188977" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="589.8425196850394" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="589.8425196850394" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="595.275590551181" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="595.275590551181" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="600.7086614173229" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="600.7086614173229" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="606.1417322834645" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="606.1417322834645" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="611.5748031496063" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="611.5748031496063" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="617.007874015748" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="617.007874015748" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="622.4409448818898" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="622.4409448818898" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="627.8740157480315" cy="450.0" r="3.5" fill="#fdd835" />
+<text x="627.8740157480315" y="442.0" text-anchor="middle" font-size="11">1.00</text>
+<circle cx="633.3070866141733" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="633.3070866141733" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="638.740157480315" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="638.740157480315" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="644.1732283464567" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="644.1732283464567" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="649.6062992125984" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="649.6062992125984" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="655.0393700787401" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="655.0393700787401" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="660.4724409448819" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="660.4724409448819" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="665.9055118110236" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="665.9055118110236" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="671.3385826771654" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="671.3385826771654" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="676.7716535433071" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="676.7716535433071" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="682.2047244094489" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="682.2047244094489" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="687.6377952755905" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="687.6377952755905" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="693.0708661417323" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="693.0708661417323" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="698.503937007874" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="698.503937007874" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="703.9370078740158" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="703.9370078740158" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="709.3700787401575" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="709.3700787401575" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="714.8031496062993" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="714.8031496062993" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="720.236220472441" cy="70.0" r="3.5" fill="#fdd835" />
+<text x="720.236220472441" y="62.0" text-anchor="middle" font-size="11">6.00</text>
+<circle cx="725.6692913385826" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="725.6692913385826" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="731.1023622047244" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="731.1023622047244" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="736.5354330708661" cy="146.0" r="3.5" fill="#fdd835" />
+<text x="736.5354330708661" y="138.0" text-anchor="middle" font-size="11">5.00</text>
+<circle cx="741.9685039370079" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="741.9685039370079" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="747.4015748031496" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="747.4015748031496" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="752.8346456692914" cy="298.0" r="3.5" fill="#fdd835" />
+<text x="752.8346456692914" y="290.0" text-anchor="middle" font-size="11">3.00</text>
+<circle cx="758.2677165354331" cy="450.0" r="3.5" fill="#fdd835" />
+<text x="758.2677165354331" y="442.0" text-anchor="middle" font-size="11">1.00</text>
+<circle cx="763.7007874015749" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="763.7007874015749" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="769.1338582677165" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="769.1338582677165" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<circle cx="774.5669291338583" cy="222.0" r="3.5" fill="#fdd835" />
+<text x="774.5669291338583" y="214.0" text-anchor="middle" font-size="11">4.00</text>
+<circle cx="780.0" cy="374.0" r="3.5" fill="#fdd835" />
+<text x="780.0" y="366.0" text-anchor="middle" font-size="11">2.00</text>
+<line x1="90.0" y1="450" x2="90.0" y2="456" stroke="#333333" />
+<text x="90.0" y="470" text-anchor="middle" font-size="12">0</text>
+<line x1="176.92913385826773" y1="450" x2="176.92913385826773" y2="456" stroke="#333333" />
+<text x="176.92913385826773" y="470" text-anchor="middle" font-size="12">16</text>
+<line x1="263.85826771653547" y1="450" x2="263.85826771653547" y2="456" stroke="#333333" />
+<text x="263.85826771653547" y="470" text-anchor="middle" font-size="12">32</text>
+<line x1="350.78740157480314" y1="450" x2="350.78740157480314" y2="456" stroke="#333333" />
+<text x="350.78740157480314" y="470" text-anchor="middle" font-size="12">48</text>
+<line x1="437.7165354330709" y1="450" x2="437.7165354330709" y2="456" stroke="#333333" />
+<text x="437.7165354330709" y="470" text-anchor="middle" font-size="12">64</text>
+<line x1="524.6456692913387" y1="450" x2="524.6456692913387" y2="456" stroke="#333333" />
+<text x="524.6456692913387" y="470" text-anchor="middle" font-size="12">80</text>
+<line x1="611.5748031496063" y1="450" x2="611.5748031496063" y2="456" stroke="#333333" />
+<text x="611.5748031496063" y="470" text-anchor="middle" font-size="12">96</text>
+<line x1="698.503937007874" y1="450" x2="698.503937007874" y2="456" stroke="#333333" />
+<text x="698.503937007874" y="470" text-anchor="middle" font-size="12">112</text>
+<line x1="780.0" y1="450" x2="780.0" y2="456" stroke="#333333" />
+<text x="780.0" y="470" text-anchor="middle" font-size="12">127</text>
+</svg>

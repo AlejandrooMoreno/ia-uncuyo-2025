@@ -56,83 +56,122 @@ def bfs_search(env, start, goal):
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
             next_state, _, _, _, _ = env.step(action)
-            if next_state not in visited:
-                estados_explorados += 1
-                visited.add(next_state)
+
             # Evitar casilleros 'H' (Hole)
-            if next_state not in visited and env.unwrapped.desc.flatten()[next_state] != b'H':
-                if action == 0 or action == 2:
-                    nuevo_costo = costo + 1
-                else:
-                    nuevo_costo = costo + 10
-                queue.append((next_state, path + [next_state], nuevo_costo))
+            if env.unwrapped.desc.flatten()[next_state] == b'H':
+                continue
+
+            if next_state in visited:
+                continue
+
+            visited.add(next_state)
+            estados_explorados += 1
+
+            if action == 0 or action == 2:
+                nuevo_costo = costo + 1
+            else:
+                nuevo_costo = costo + 10
+
+            queue.append((next_state, path + [next_state], nuevo_costo))
     print("No se encontró camino al objetivo.")
     return None, None, None
 
 def dfs_search(env, start, goal):
     env.unwrapped.s = start
-    visited = set()
-    stack = []
-    stack.append((start, [start], 0))  # (estado actual, camino hasta aquí)
-    visited.add(start)
-    info = env.reset()
-    return dfs_searchR(env, goal, stack, visited, 1)
+    env.reset()
 
-def dfs_searchR(env, goal, stack, visited, estados_explorados):
-    current_state, path, costo = stack.pop()
-    if current_state == goal:
-        print(f"Camino encontrado: {path}")
-        return estados_explorados, len(path) - 1, costo
-    for action in range(env.action_space.n):
-        env.unwrapped.s = current_state
-        next_state, _, _, _, _ = env.step(action)
-        if next_state not in visited:
-            estados_explorados += 1
+    visited = {start}
+    estados_explorados = 1
+
+    def dfs(current_state, path, costo):
+        nonlocal estados_explorados
+
+        if current_state == goal:
+            print(f"Camino encontrado: {path}")
+            return estados_explorados, len(path) - 1, costo
+
+        for action in range(env.action_space.n):
+            env.unwrapped.s = current_state
+            next_state, _, _, _, _ = env.step(action)
+
+            if env.unwrapped.desc.flatten()[next_state] == b'H':
+                continue
+
+            if next_state in visited:
+                continue
+
             visited.add(next_state)
-        # Evitar casilleros 'H' (Hole)
-        if next_state not in visited and env.unwrapped.desc.flatten()[next_state] != b'H':
+            estados_explorados += 1
+
             if action == 0 or action == 2:
                 nuevo_costo = costo + 1
             else:
                 nuevo_costo = costo + 10
-            stack.append((next_state, path + [next_state], nuevo_costo))
-        Restados_explorados, Racciones, Rcosto = dfs_searchR(env, goal, stack, visited)
-        if Restados_explorados is not None:
-            return Restados_explorados, Racciones, Rcosto
+
+            resultado = dfs(next_state, path + [next_state], nuevo_costo)
+            if resultado is not None:
+                return resultado
+
+            visited.remove(next_state)
+
+        return None
+
+    resultado = dfs(start, [start], 0)
+    if resultado is not None:
+        return resultado
+
+    print("No se encontró camino al objetivo.")
     return None, None, None
+
 
 def limited_dfs_search(env, limit, start, goal):
     env.unwrapped.s = start
-    visited = set()
-    stack = []
-    stack.append((start, [start], 0))  # (estado actual, camino hasta aquí)
-    visited.add(start)
-    info = env.reset()
-    return dfs_searchR(env, limit, goal, stack, visited, 1)
+    env.reset()
 
-def limited_dfs_searchR(env, limit, goal, stack, visited, estados_explorados):
-    current_state, path, costo = stack.pop()
-    if current_state == goal:
-        print(f"Camino encontrado: {path}")
-        return estados_explorados, len(path) - 1, costo
-    if len(path) == limit:
-        return None, None, None
-    for action in range(env.action_space.n):
-        env.unwrapped.s = current_state
-        next_state, _, _, _, _ = env.step(action)
-        if next_state not in visited:
-            estados_explorados += 1
+    visited = {start}
+    estados_explorados = 1
+
+    def dfs_limit(current_state, path, costo, profundidad):
+        nonlocal estados_explorados
+
+        if current_state == goal:
+            print(f"Camino encontrado: {path}")
+            return estados_explorados, len(path) - 1, costo
+
+        if profundidad >= limit:
+            return None
+
+        for action in range(env.action_space.n):
+            env.unwrapped.s = current_state
+            next_state, _, _, _, _ = env.step(action)
+
+            if env.unwrapped.desc.flatten()[next_state] == b'H':
+                continue
+
+            if next_state in visited:
+                continue
+
             visited.add(next_state)
-        # Evitar casilleros 'H' (Hole)
-        if next_state not in visited and env.unwrapped.desc.flatten()[next_state] != b'H':
+            estados_explorados += 1
+
             if action == 0 or action == 2:
                 nuevo_costo = costo + 1
             else:
                 nuevo_costo = costo + 10
-            stack.append((next_state, path + [next_state], nuevo_costo))
-        Restados_explorados, Racciones, Rcosto = dfs_searchR(env, goal, stack, visited)
-        if Restados_explorados is not None:
-            return Restados_explorados, Racciones, Rcosto
+
+            resultado = dfs_limit(next_state, path + [next_state], nuevo_costo, profundidad + 1)
+            if resultado is not None:
+                return resultado
+
+            visited.remove(next_state)
+
+        return None
+
+    resultado = dfs_limit(start, [start], 0, 0)
+    if resultado is not None:
+        return resultado
+
+    print("No se encontró camino al objetivo dentro del límite.")
     return None, None, None
 
 def uniform_cost_search(env, start, goal):
@@ -259,7 +298,7 @@ def main():
     env, start, goal = deterministic_random_100_environment()
     #random_search(env, start, goal)
     #bfs_search(env, start, goal)
-    _, _, _ = uniform_cost_search(env, start, goal)
+    #_, _, _ = uniform_cost_search(env, start, goal)
 
 if __name__ == "__main__":
     main()
