@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 from typing import Dict, List
 
@@ -10,6 +11,7 @@ import matplotlib
 
 matplotlib.use("Agg")  # noqa: E402 keep backend config before pyplot import
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 
@@ -115,20 +117,23 @@ def _prepare_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _plot_metric(df: pd.DataFrame, metric: str, ylabel: str, title: str, output_path: Path) -> None:
-    """Draw a grid of line plots comparing agents for a given metric."""
+    """Draw grouped bar charts comparing agents for a given metric."""
     grids = sorted(
         df["grid"].unique(),
         key=lambda g: (int(g.split("x")[0]), int(g.split("x")[1])),
     )
 
-    fig, axes = plt.subplots(2, 3, figsize=(15, 8), sharex=True)
-    axes = axes.flatten()
+    cols = 3
+    rows = math.ceil(len(grids) / cols)
+    fig, axes = plt.subplots(rows, cols, figsize=(5.5 * cols, 4.2 * rows), sharey=False)
+    axes = np.array(axes, dtype=object).ravel()
 
     handles = []
     labels = []
     agent_order = list(AGENT_STYLES.keys())
 
-    for ax, grid in zip(axes, grids, strict=False):
+    for idx, grid in enumerate(grids):
+        ax = axes[idx]
         grid_data = df[df["grid"] == grid]
         grouped = (
             grid_data.groupby(["agent", "suciedad"], as_index=False)[metric]
@@ -144,32 +149,46 @@ def _plot_metric(df: pd.DataFrame, metric: str, ylabel: str, title: str, output_
             agent for agent in agent_groups.keys() if agent not in agent_order
         ]
 
-        for agent in ordered_agents:
-            agent_data = agent_groups[agent]
+        categories = sorted(grid_data["suciedad"].unique())
+        category_positions = list(range(len(categories)))
+        width = 0.7 / max(len(ordered_agents), 1)
+
+        pivot = grouped.pivot(index="suciedad", columns="agent", values=metric)
+
+        for position_index, agent in enumerate(ordered_agents):
+            agent_values = (
+                pivot[agent].reindex(categories).fillna(0)
+                if agent in pivot
+                else pd.Series(0, index=categories, dtype=float)
+            )
+            offset = position_index - (len(ordered_agents) - 1) / 2
+            positions = [pos + offset * width for pos in category_positions]
             style = AGENT_STYLES.get(agent, {})
-            line, = ax.plot(
-                agent_data["suciedad"],
-                agent_data[metric],
-                marker=style.get("marker", "o"),
-                linestyle=style.get("linestyle", "-"),
-                linewidth=style.get("linewidth", 2.0),
-                markersize=style.get("markersize", 5),
+            bars = ax.bar(
+                positions,
+                agent_values.values,
+                width=width,
                 color=style.get("color"),
-                markerfacecolor=style.get("markerfacecolor"),
-                zorder=style.get("zorder", 2),
+                edgecolor=style.get("color"),
+                linewidth=style.get("linewidth", 1.5),
                 label=agent,
+                zorder=style.get("zorder", 2),
+                alpha=0.85,
             )
             if not handles:
-                handles.append(line)
+                handles.append(bars[0])
                 labels.append(agent)
             elif agent not in labels:
-                handles.append(line)
+                handles.append(bars[0])
                 labels.append(agent)
 
         ax.set_title(grid)
-        ax.set_xlabel("Probabilidad de suciedad inicial")
         ax.set_ylabel(ylabel)
-        ax.grid(True, alpha=0.3)
+        ax.set_xticks(category_positions)
+        ax.set_xticklabels([f"{cat:.1f}" for cat in categories])
+        ax.set_xlabel("Probabilidad de suciedad inicial")
+        ax.set_axisbelow(True)
+        ax.grid(axis="y", alpha=0.3)
 
     for ax in axes[len(grids) :]:
         fig.delaxes(ax)
