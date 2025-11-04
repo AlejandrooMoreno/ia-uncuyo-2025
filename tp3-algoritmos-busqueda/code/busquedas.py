@@ -1,58 +1,77 @@
-import gymnasium as gym
-from gymnasium import wrappers
+try:
+    import gymnasium as gym
+    from gymnasium import wrappers
+except ModuleNotFoundError:
+    gym = None
+    wrappers = None
+
+import sys
+
+sys.setrecursionlimit(25000)
+
 from random_map import generate_random_map_custom 
 from collections import deque
 import heapq
 
 def deterministic_random_100_environment():
     env, start, goal = generate_random_map_custom(100, 0.92)
-    env = wrappers.TimeLimit(env, 1000)
+    if wrappers is not None:
+        env = wrappers.TimeLimit(env, 1000)
+    elif hasattr(env, "max_steps"):
+        env.max_steps = 1000
     return env, start, goal
 
-def random_search(env, start, goal):
-    current = start
+def random_search(env, start, goal, max_steps=1000, verbose=False):
     env.unwrapped.s = start
-    state = env.unwrapped.s
-    print("Posición inicial forzada:", state)
-    info = env.reset()
-    done = truncated = False
-    costo=0
+    env.reset()
+
+    done = False
+    truncated = False
+    costo = 0
     acciones = 0
+
+    if verbose:
+        print("Posición inicial forzada:", start)
+
     while not (done or truncated):
         action = env.action_space.sample()
         acciones += 1
+
         if action == 0 or action == 2:
             costo += 1
         else:
             costo += 10
-        if acciones == 1000:
-            truncated = True
-        # Acción aleatoria
-        next_state, reward, done, _, _ = env.step(action)
-        print(f"Acción: {action}, Nuevo estado: {next_state}, Recompensa: {reward}")
-        if not reward == 1.0:
-            print(f"¿Ganó? (encontró el objetivo): False")
-            print(f"¿Perdió? (se cayó): {done}")
-            print(f"¿Frenó? (alcanzó el máximo de pasos posible): " + truncated)
-        else:
-            print(f"¿Ganó? (encontró el objetivo): {done}")
+
+        next_state, reward, done, truncated_flag, _ = env.step(action)
+        truncated = truncated_flag or acciones >= max_steps
+
+        if verbose:
+            print(f"Acción: {action}, Nuevo estado: {next_state}, Recompensa: {reward}")
+
+        if reward == 1.0:
+            if verbose:
+                print(f"¿Ganó? (encontró el objetivo): {done}")
             return acciones + 1, acciones, costo
-        state = next_state
+
+    if verbose:
+        print("No se encontró camino al objetivo (búsqueda aleatoria).")
+
     return None, None, None
 
-def bfs_search(env, start, goal):
+def bfs_search(env, start, goal, verbose=False):
     env.unwrapped.s = start
-    visited = set()
+    env.reset()
+
+    visited = {start}
     queue = deque()
-    queue.append((start, [start], 1)) # (estado actual, camino hasta aquí)
-    visited.add(start)
-    info = env.reset()
+    queue.append((start, 0, 0))  # (estado, acciones acumuladas, costo acumulado)
     estados_explorados = 1
     while queue:
-        current_state, path, costo = queue.popleft()
+        current_state, acciones, costo = queue.popleft()
         if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, costo
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {costo}")
+            return estados_explorados, acciones, costo
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
             next_state, _, _, _, _ = env.step(action)
@@ -68,27 +87,31 @@ def bfs_search(env, start, goal):
             estados_explorados += 1
 
             if action == 0 or action == 2:
+                acciones_sig = acciones + 1
                 nuevo_costo = costo + 1
             else:
+                acciones_sig = acciones + 1
                 nuevo_costo = costo + 10
 
-            queue.append((next_state, path + [next_state], nuevo_costo))
-    print("No se encontró camino al objetivo.")
+            queue.append((next_state, acciones_sig, nuevo_costo))
+    if verbose:
+        print("No se encontró camino al objetivo.")
     return None, None, None
 
-def dfs_search(env, start, goal):
+def dfs_search(env, start, goal, verbose=False):
     env.unwrapped.s = start
     env.reset()
 
     visited = {start}
     estados_explorados = 1
 
-    def dfs(current_state, path, costo):
+    def dfs(current_state, acciones, costo):
         nonlocal estados_explorados
 
         if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, costo
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {costo}")
+            return estados_explorados, acciones, costo
 
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
@@ -105,38 +128,39 @@ def dfs_search(env, start, goal):
 
             if action == 0 or action == 2:
                 nuevo_costo = costo + 1
+                nuevas_acciones = acciones + 1
             else:
                 nuevo_costo = costo + 10
+                nuevas_acciones = acciones + 1
 
-            resultado = dfs(next_state, path + [next_state], nuevo_costo)
+            resultado = dfs(next_state, nuevas_acciones, nuevo_costo)
             if resultado is not None:
                 return resultado
 
-            visited.remove(next_state)
-
         return None
 
-    resultado = dfs(start, [start], 0)
+    resultado = dfs(start, 0, 0)
     if resultado is not None:
         return resultado
 
-    print("No se encontró camino al objetivo.")
+    if verbose:
+        print("No se encontró camino al objetivo.")
     return None, None, None
 
 
-def limited_dfs_search(env, limit, start, goal):
+def limited_dfs_search(env, limit, start, goal, verbose=False):
     env.unwrapped.s = start
     env.reset()
 
-    visited = {start}
+    mejores_profundidades = {start: 0}
     estados_explorados = 1
 
-    def dfs_limit(current_state, path, costo, profundidad):
+    def dfs_limit(current_state, acciones, costo, profundidad, en_camino):
         nonlocal estados_explorados
-
         if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, costo
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {costo}")
+            return estados_explorados, acciones, costo
 
         if profundidad >= limit:
             return None
@@ -148,67 +172,85 @@ def limited_dfs_search(env, limit, start, goal):
             if env.unwrapped.desc.flatten()[next_state] == b'H':
                 continue
 
-            if next_state in visited:
+            if next_state in en_camino:
                 continue
 
-            visited.add(next_state)
+            if action == 0 or action == 2:
+                paso = 1
+            else:
+                paso = 10
+            nuevo_costo = costo + paso
+            nuevas_acciones = acciones + 1
+
+            profundidad_nueva = profundidad + 1
+            mejor_prev = mejores_profundidades.get(next_state)
+            if mejor_prev is not None and profundidad_nueva >= mejor_prev:
+                continue
+
+            mejores_profundidades[next_state] = profundidad_nueva
             estados_explorados += 1
 
-            if action == 0 or action == 2:
-                nuevo_costo = costo + 1
-            else:
-                nuevo_costo = costo + 10
+            en_camino.add(next_state)
+            resultado = dfs_limit(next_state, nuevas_acciones, nuevo_costo, profundidad + 1, en_camino)
+            en_camino.remove(next_state)
 
-            resultado = dfs_limit(next_state, path + [next_state], nuevo_costo, profundidad + 1)
             if resultado is not None:
                 return resultado
 
-            visited.remove(next_state)
-
         return None
 
-    resultado = dfs_limit(start, [start], 0, 0)
+    resultado = dfs_limit(start, 0, 0, 0, {start})
     if resultado is not None:
         return resultado
 
-    print("No se encontró camino al objetivo dentro del límite.")
+    if verbose:
+        print("No se encontró camino al objetivo dentro del límite.")
     return None, None, None
 
-def uniform_cost_search(env, start, goal):
+def uniform_cost_search(env, start, goal, verbose=False):
     env.unwrapped.s = start
-    visited = set()
     heap = []
-    heapq.heappush(heap, (0, start, [start]))  # (costo acumulado, estado actual, camino)
-    info = env.reset()
+    heapq.heappush(heap, (0, 0, start))  # (costo acumulado, acciones, estado)
+    env.reset()
     costos = {start: 0}
-    estados_explorados = 1
+    acciones_minimas = {start: 0}
+    estados_explorados = 0
     while heap:
-        costo, current_state, path = heapq.heappop(heap)
-        if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, costo
-        if costo > costos.get(current_state, float('inf')):
+        costo, acciones, current_state = heapq.heappop(heap)
+        if costo > costos.get(current_state, float("inf")):
             continue
+
+        estados_explorados += 1
+
+        if current_state == goal:
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {costo}")
+            return estados_explorados, acciones, costo
+
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
             next_state, _, _, _, _ = env.step(action)
-            if next_state not in visited:
-                estados_explorados += 1
-                visited.add(next_state)
             if env.unwrapped.desc.flatten()[next_state] != b'H':
                 # Costo según acción
                 if action == 0 or action == 2:
                     new_cost = costo + 1
+                    new_actions = acciones + 1
                 else:
                     new_cost = costo + 10
-                if next_state in visited:
-                    if new_cost < costos.get(next_state, float('inf')):
-                        costos[next_state] = new_cost
-                heapq.heappush(heap, (new_cost, next_state, path + [next_state]))
-    print("No se encontró camino al objetivo.")
+                    new_actions = acciones + 1
+
+                if new_cost < costos.get(next_state, float("inf")):
+                    costos[next_state] = new_cost
+                    acciones_minimas[next_state] = new_actions
+                    heapq.heappush(heap, (new_cost, new_actions, next_state))
+                elif new_cost == costos.get(next_state) and new_actions < acciones_minimas.get(next_state, float("inf")):
+                    acciones_minimas[next_state] = new_actions
+                    heapq.heappush(heap, (new_cost, new_actions, next_state))
+    if verbose:
+        print("No se encontró camino al objetivo.")
     return None, None, None
 
-def a_star_search_1(env, start, goal):
+def a_star_search_1(env, start, goal, verbose=False):
     def heuristic(state, goal):
         x1, y1 = divmod(state, env.unwrapped.ncol)
         x2, y2 = divmod(goal, env.unwrapped.ncol)
@@ -217,12 +259,12 @@ def a_star_search_1(env, start, goal):
     env.unwrapped.s = start
     costos = {start: 0}
     heap = []
-    heapq.heappush(heap, (heuristic(start, goal), 0, start, [start]))
+    heapq.heappush(heap, (heuristic(start, goal), 0, 0, start))  # (f, g, acciones, estado)
     visited = set()
     estados_explorados = 0
 
     while heap:
-        f, g, current_state, path = heapq.heappop(heap)
+        f, g, acciones, current_state = heapq.heappop(heap)
 
         if current_state in visited:
             continue
@@ -230,8 +272,9 @@ def a_star_search_1(env, start, goal):
         estados_explorados += 1
 
         if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, g
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {g}")
+            return estados_explorados, acciones, g
 
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
@@ -241,15 +284,17 @@ def a_star_search_1(env, start, goal):
                 continue
 
             new_g = g + 1
+            nuevas_acciones = acciones + 1
             if new_g < costos.get(next_state, float('inf')):
                 costos[next_state] = new_g
                 new_f = new_g + heuristic(next_state, goal)
-                heapq.heappush(heap, (new_f, new_g, next_state, path + [next_state]))
+                heapq.heappush(heap, (new_f, new_g, nuevas_acciones, next_state))
 
-    print("No se encontró camino al objetivo.")
+    if verbose:
+        print("No se encontró camino al objetivo.")
     return None, None, None
 
-def a_star_search_2(env, start, goal):
+def a_star_search_2(env, start, goal, verbose=False):
     def heuristic(state, goal):
         x1, y1 = divmod(state, env.unwrapped.ncol)
         x2, y2 = divmod(goal, env.unwrapped.ncol)
@@ -258,12 +303,12 @@ def a_star_search_2(env, start, goal):
     env.unwrapped.s = start
     costos = {start: 0}
     heap = []
-    heapq.heappush(heap, (heuristic(start, goal), 0, start, [start]))
+    heapq.heappush(heap, (heuristic(start, goal), 0, 0, start))  # (f, g, acciones, estado)
     visited = set()
     estados_explorados = 0
 
     while heap:
-        f, g, current_state, path = heapq.heappop(heap)
+        f, g, acciones, current_state = heapq.heappop(heap)
 
         if current_state in visited:
             continue
@@ -271,8 +316,9 @@ def a_star_search_2(env, start, goal):
         estados_explorados += 1
 
         if current_state == goal:
-            print(f"Camino encontrado: {path}")
-            return estados_explorados, len(path) - 1, g
+            if verbose:
+                print(f"Objetivo alcanzado con {acciones} acciones y costo {g}")
+            return estados_explorados, acciones, g
 
         for action in range(env.action_space.n):
             env.unwrapped.s = current_state
@@ -283,15 +329,18 @@ def a_star_search_2(env, start, goal):
 
             if action == 0 or action == 2:
                 new_g = g + 1
+                nuevas_acciones = acciones + 1
             else: 
                 new_g = g + 10
+                nuevas_acciones = acciones + 1
                 
             if new_g < costos.get(next_state, float('inf')):
                 costos[next_state] = new_g
                 new_f = new_g + heuristic(next_state, goal)
-                heapq.heappush(heap, (new_f, new_g, next_state, path + [next_state]))
+                heapq.heappush(heap, (new_f, new_g, nuevas_acciones, next_state))
 
-    print("No se encontró camino al objetivo.")
+    if verbose:
+        print("No se encontró camino al objetivo.")
     return None, None, None
 
 def main():
