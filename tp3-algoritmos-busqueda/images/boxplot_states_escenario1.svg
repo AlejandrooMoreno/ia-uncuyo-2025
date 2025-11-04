@@ -1,0 +1,58 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='960' height='470' viewBox='0 0 960 470' font-family='sans-serif'>
+  <style>text { fill: #1a1a1a; font-size: 16px; } .axis { stroke: #444; stroke-width: 1; } .grid { stroke: #d0d0d0; stroke-dasharray: 4 4; stroke-width: 1; } .box { fill: #74add1; stroke: #225ea8; stroke-width: 1.5; } .median { stroke: #034e7b; stroke-width: 2.5; } .whisker { stroke: #045a8d; stroke-width: 1.5; }</style>
+  <rect width='100%' height='100%' fill='white' />
+  <text x='480.0' y='35.0' text-anchor='middle' font-size='22' font-weight='bold'>Estados explorados - Escenario 1</text>
+  <text x='480.0' y='445' text-anchor='middle' font-size='16'>Estados explorados</text>
+  <line x1='352.0' y1='60' x2='352.0' y2='410' class='grid' />
+  <text x='352.0' y='430' text-anchor='middle'>40123.0</text>
+  <line x1='484.0' y1='60' x2='484.0' y2='410' class='grid' />
+  <text x='484.0' y='430' text-anchor='middle'>80246.0</text>
+  <line x1='616.0' y1='60' x2='616.0' y2='410' class='grid' />
+  <text x='616.0' y='430' text-anchor='middle'>120369.0</text>
+  <line x1='748.0' y1='60' x2='748.0' y2='410' class='grid' />
+  <text x='748.0' y='430' text-anchor='middle'>160492.0</text>
+  <line x1='880.0' y1='60' x2='880.0' y2='410' class='grid' />
+  <text x='880.0' y='430' text-anchor='middle'>200615.0</text>
+  <line x1='220.2960895247115' y1='86.0' x2='249.3128629464397' y2='86.0' class='whisker' />
+  <rect x='225.86915235650375' y='70' width='16.251202552152137' height='32' class='box' />
+  <line x1='232.15283004760363' y1='70' x2='232.15283004760363' y2='102' class='median' />
+  <line x1='220.2960895247115' y1='75.33333333333333' x2='220.2960895247115' y2='96.66666666666667' class='median' />
+  <line x1='249.3128629464397' y1='75.33333333333333' x2='249.3128629464397' y2='96.66666666666667' class='median' />
+  <text x='205' y='92.0' text-anchor='end'>BFS (n=30)</text>
+  <line x1='220.13817511153204' y1='134.0' x2='248.34563716571543' y2='134.0' class='whisker' />
+  <rect x='226.27134062757023' y='118' width='9.72900829947909' height='32' class='box' />
+  <line x1='231.0786830496224' y1='118' x2='231.0786830496224' y2='150' class='median' />
+  <line x1='220.13817511153204' y1='123.33333333333333' x2='220.13817511153204' y2='144.66666666666666' class='median' />
+  <line x1='248.34563716571543' y1='123.33333333333333' x2='248.34563716571543' y2='144.66666666666666' class='median' />
+  <text x='205' y='140.0' text-anchor='end'>DFS (n=30)</text>
+  <line x1='220.13817511153204' y1='182.0' x2='310.50140816987766' y2='182.0' class='whisker' />
+  <rect x='234.6794606584752' y='166' width='42.95436532662063' height='32' class='box' />
+  <line x1='247.03626348976897' y1='166' x2='247.03626348976897' y2='198' class='median' />
+  <line x1='220.13817511153204' y1='171.33333333333334' x2='220.13817511153204' y2='192.66666666666666' class='median' />
+  <line x1='310.50140816987766' y1='171.33333333333334' x2='310.50140816987766' y2='192.66666666666666' class='median' />
+  <text x='205' y='188.0' text-anchor='end'>DLS-50 (n=14)</text>
+  <line x1='220.13817511153204' y1='230.0' x2='475.1074446078309' y2='230.0' class='whisker' />
+  <rect x='267.15390175211223' y='214' width='54.93118660120132' height='32' class='box' />
+  <line x1='279.4810956309349' y1='214' x2='279.4810956309349' y2='246' class='median' />
+  <line x1='220.13817511153204' y1='219.33333333333334' x2='220.13817511153204' y2='240.66666666666666' class='median' />
+  <line x1='475.1074446078309' y1='219.33333333333334' x2='475.1074446078309' y2='240.66666666666666' class='median' />
+  <text x='205' y='236.0' text-anchor='end'>DLS-75 (n=21)</text>
+  <line x1='220.13817511153204' y1='278.0' x2='880.0' y2='278.0' class='whisker' />
+  <rect x='274.11365052463674' y='262' width='212.84559978067443' height='32' class='box' />
+  <line x1='323.49480347930114' y1='262' x2='323.49480347930114' y2='294' class='median' />
+  <line x1='220.13817511153204' y1='267.3333333333333' x2='220.13817511153204' y2='288.6666666666667' class='median' />
+  <line x1='880.0' y1='267.3333333333333' x2='880.0' y2='288.6666666666667' class='median' />
+  <text x='205' y='284.0' text-anchor='end'>DLS-100 (n=24)</text>
+  <line x1='220.14804476235577' y1='326.0' x2='249.1450788824365' y2='326.0' class='whisker' />
+  <rect x='224.49480347930114' y='310' width='14.711537023652284' height='32' class='box' />
+  <line x1='232.79106746753732' y1='310' x2='232.79106746753732' y2='342' class='median' />
+  <line x1='220.14804476235577' y1='315.3333333333333' x2='220.14804476235577' y2='336.6666666666667' class='median' />
+  <line x1='249.1450788824365' y1='315.3333333333333' x2='249.1450788824365' y2='336.6666666666667' class='median' />
+  <text x='205' y='332.0' text-anchor='end'>UCS (n=30)</text>
+  <line x1='220.03947860329487' y1='374.0' x2='239.41689305385938' y2='374.0' class='whisker' />
+  <rect x='220.60862846746255' y='358' width='4.000498467213333' height='32' class='box' />
+  <line x1='221.4968970415971' y1='358' x2='221.4968970415971' y2='390' class='median' />
+  <line x1='220.03947860329487' y1='363.3333333333333' x2='220.03947860329487' y2='384.6666666666667' class='median' />
+  <line x1='239.41689305385938' y1='363.3333333333333' x2='239.41689305385938' y2='384.6666666666667' class='median' />
+  <text x='205' y='380.0' text-anchor='end'>A1 (n=30)</text>
+</svg>

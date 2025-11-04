@@ -1,0 +1,64 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='960' height='518' viewBox='0 0 960 518' font-family='sans-serif'>
+  <style>text { fill: #1a1a1a; font-size: 16px; } .axis { stroke: #444; stroke-width: 1; } .grid { stroke: #d0d0d0; stroke-dasharray: 4 4; stroke-width: 1; } .box { fill: #74add1; stroke: #225ea8; stroke-width: 1.5; } .median { stroke: #034e7b; stroke-width: 2.5; } .whisker { stroke: #045a8d; stroke-width: 1.5; }</style>
+  <rect width='100%' height='100%' fill='white' />
+  <text x='480.0' y='35.0' text-anchor='middle' font-size='22' font-weight='bold'>Tiempo (segundos) - Escenario 2</text>
+  <text x='480.0' y='493' text-anchor='middle' font-size='16'>Tiempo (segundos)</text>
+  <line x1='352.0' y1='60' x2='352.0' y2='458' class='grid' />
+  <text x='352.0' y='478' text-anchor='middle'>0.1</text>
+  <line x1='484.0' y1='60' x2='484.0' y2='458' class='grid' />
+  <text x='484.0' y='478' text-anchor='middle'>0.3</text>
+  <line x1='616.0' y1='60' x2='616.0' y2='458' class='grid' />
+  <text x='616.0' y='478' text-anchor='middle'>0.4</text>
+  <line x1='748.0' y1='60' x2='748.0' y2='458' class='grid' />
+  <text x='748.0' y='478' text-anchor='middle'>0.5</text>
+  <line x1='880.0' y1='60' x2='880.0' y2='458' class='grid' />
+  <text x='880.0' y='478' text-anchor='middle'>0.7</text>
+  <line x1='220.00746479925982' y1='86.0' x2='220.11423477454218' y2='86.0' class='whisker' />
+  <rect x='220.0101039678423' y='70' width='1' height='32' class='box' />
+  <line x1='220.01502787216808' y1='70' x2='220.01502787216808' y2='102' class='median' />
+  <line x1='220.00746479925982' y1='75.33333333333333' x2='220.00746479925982' y2='96.66666666666667' class='median' />
+  <line x1='220.11423477454218' y1='75.33333333333333' x2='220.11423477454218' y2='96.66666666666667' class='median' />
+  <text x='205' y='92.0' text-anchor='end'>RANDOM (n=30)</text>
+  <line x1='220.19270695520362' y1='134.0' x2='245.91833076535391' y2='134.0' class='whisker' />
+  <rect x='225.01698986632238' y='118' width='14.129237247733556' height='32' class='box' />
+  <line x1='230.71453257033062' y1='118' x2='230.71453257033062' y2='150' class='median' />
+  <line x1='220.19270695520362' y1='123.33333333333333' x2='220.19270695520362' y2='144.66666666666666' class='median' />
+  <line x1='245.91833076535391' y1='123.33333333333333' x2='245.91833076535391' y2='144.66666666666666' class='median' />
+  <text x='205' y='140.0' text-anchor='end'>BFS (n=30)</text>
+  <line x1='220.03997588577573' y1='182.0' x2='239.93669493058792' y2='182.0' class='whisker' />
+  <rect x='224.57191592718448' y='166' width='6.771911842463851' height='32' class='box' />
+  <line x1='227.7652609208099' y1='166' x2='227.7652609208099' y2='198' class='median' />
+  <line x1='220.03997588577573' y1='171.33333333333334' x2='220.03997588577573' y2='192.66666666666666' class='median' />
+  <line x1='239.93669493058792' y1='171.33333333333334' x2='239.93669493058792' y2='192.66666666666666' class='median' />
+  <text x='205' y='188.0' text-anchor='end'>DFS (n=30)</text>
+  <line x1='220.04461719097824' y1='230.0' x2='377.5910662627072' y2='230.0' class='whisker' />
+  <rect x='257.37989997818266' y='214' width='68.14730278457642' height='32' class='box' />
+  <line x1='308.3496441005186' y1='214' x2='308.3496441005186' y2='246' class='median' />
+  <line x1='220.04461719097824' y1='219.33333333333334' x2='220.04461719097824' y2='240.66666666666666' class='median' />
+  <line x1='377.5910662627072' y1='219.33333333333334' x2='377.5910662627072' y2='240.66666666666666' class='median' />
+  <text x='205' y='236.0' text-anchor='end'>DLS-50 (n=30)</text>
+  <line x1='220.04233943952215' y1='278.0' x2='591.1279864625483' y2='278.0' class='whisker' />
+  <rect x='270.10790600915226' y='262' width='176.09095145881605' height='32' class='box' />
+  <line x1='313.83602711913784' y1='262' x2='313.83602711913784' y2='294' class='median' />
+  <line x1='220.04233943952215' y1='267.3333333333333' x2='220.04233943952215' y2='288.6666666666667' class='median' />
+  <line x1='591.1279864625483' y1='267.3333333333333' x2='591.1279864625483' y2='288.6666666666667' class='median' />
+  <text x='205' y='284.0' text-anchor='end'>DLS-75 (n=30)</text>
+  <line x1='220.0406074306673' y1='326.0' x2='880.0' y2='326.0' class='whisker' />
+  <rect x='277.7577443928575' y='310' width='254.11758482507355' height='32' class='box' />
+  <line x1='365.9373792363591' y1='310' x2='365.9373792363591' y2='342' class='median' />
+  <line x1='220.0406074306673' y1='315.3333333333333' x2='220.0406074306673' y2='336.6666666666667' class='median' />
+  <line x1='880.0' y1='315.3333333333333' x2='880.0' y2='336.6666666666667' class='median' />
+  <text x='205' y='332.0' text-anchor='end'>DLS-100 (n=30)</text>
+  <line x1='220.18413071693135' y1='374.0' x2='253.2565935942942' y2='374.0' class='whisker' />
+  <rect x='225.25342580912294' y='358' width='17.224625958090485' height='32' class='box' />
+  <line x1='234.3714705821929' y1='358' x2='234.3714705821929' y2='390' class='median' />
+  <line x1='220.18413071693135' y1='363.3333333333333' x2='220.18413071693135' y2='384.6666666666667' class='median' />
+  <line x1='253.2565935942942' y1='363.3333333333333' x2='253.2565935942942' y2='384.6666666666667' class='median' />
+  <text x='205' y='380.0' text-anchor='end'>UCS (n=30)</text>
+  <line x1='220.0502212770403' y1='422.0' x2='242.25848894421486' y2='422.0' class='whisker' />
+  <rect x='220.7546984883538' y='406' width='4.61234102730424' height='32' class='box' />
+  <line x1='221.68452843096532' y1='406' x2='221.68452843096532' y2='438' class='median' />
+  <line x1='220.0502212770403' y1='411.3333333333333' x2='220.0502212770403' y2='432.6666666666667' class='median' />
+  <line x1='242.25848894421486' y1='411.3333333333333' x2='242.25848894421486' y2='432.6666666666667' class='median' />
+  <text x='205' y='428.0' text-anchor='end'>A2 (n=30)</text>
+</svg>
