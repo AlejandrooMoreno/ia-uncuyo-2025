@@ -56,12 +56,12 @@ El uso de IA, y no de programación tradicional, se justifica en que **el espaci
 | 4 | Implementación del entorno simplificado para entrenamiento del agente. | 6 días |
 | 5 | Implementación del algoritmo de Q-Learning | 7 días |
 | 6 | Diseño de la función de recompensa y parámetros de entrenamiento. | 3 días |
-| 7 | Entrenamiento del agente y registro de métricas (recompensa promedio, tasa de éxito). | 3 días |
-| 8 | Validación del modelo y análisis de resultados. | 3 días |
+| 7 | Entrenamiento del agente y registro de métricas (recompensa promedio, tasa de éxito). Cada 1000 episodios, se evalúan 100 con el modelo entrenado.| 5 días |
+| 8 | Análisis de los resultados y comparación de los mismos obtenidos por el modelo con n1, n2, ..., nf episodios de entrenamiento. | 2 días |
 | 9 | Redacción del informe final con resultados y conclusiones. | 3 días |
 
 ## ** GANTT **
-<img width="2800" height="1000" alt="gantt_f1_qlearning" src="https://github.com/user-attachments/assets/e2625c91-cabf-4b78-b4c6-19f5bec50b47" />
+![alt text](gantt_f1_qlearning_v2.png)
 
 
 ## **Adicional**
