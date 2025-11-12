@@ -1,4 +1,14 @@
-Tanto A*, BFS, UCS y DFS siempre encuentran la solución. DFS es claramente el peor de estos, elevando tanto el costo como la cantidad de acciones tomadas. Los otros 3 mencionados, encuentran la solución tomando la misma cantidad de acciones y con el mismo costo, tanto para el escenario 1 como para el 2. La diferencia radica en los estados explorados y en el tiempo de ejecución. A* es el que menos estados explora y el que menor tiempo de ejecución tiene, haciéndolo el claro ganador. La diferencia entre estados explorados entre BFS y UCS es pequeña, siendo BFS el que más estados explora. Sin embargo, BFS es, por algunas milésimas, más rápido en tiempo de ejecución. Por lo que para decidir cual de estos dos algoritmos es mejor, habría que ver qué es lo que queremos para nuestro algoritmo. 
+Tanto A*, BFS, UCS y DFS siempre encuentran la solución. DFS es claramente el peor de estos, elevando tanto el costo como la cantidad de acciones tomadas.
+![alt text](images/boxplot_cost_escenario1.svg)
+![alt text](images/boxplot_actions_escenario1.svg)
+![alt text](images/boxplot_cost_escenario2.svg)
+![alt text](images/boxplot_actions_escenario2.svg)
+Los otros 3 mencionados, encuentran la solución tomando la misma cantidad de acciones y con el mismo costo, tanto para el escenario 1 como para el 2. La diferencia radica en los estados explorados y en el tiempo de ejecución. A* es el que menos estados explora y el que menor tiempo de ejecución tiene, haciéndolo el claro ganador. 
+![alt text](images/boxplot_states_escenario1.svg)
+![alt text](images/boxplot_time_escenario1.svg)
+![alt text](images/boxplot_states_escenario2.svg)
+![alt text](images/boxplot_time_escenario2.svg)
+La diferencia entre estados explorados entre BFS y UCS es pequeña, siendo BFS el que más estados explora. Sin embargo, BFS es, por algunas milésimas, más rápido en tiempo de ejecución. Por lo que para decidir cual de estos dos algoritmos es mejor, habría que ver qué es lo que queremos para nuestro algoritmo. 
 
 El que sigue en términos de resolver, es DLS100, con un 0.8 en resultados obtenidos. Por razones lógicas, ningun DLS logra encontrar el camino en todas las ejecuciones. DLS75 obtuvo un 0.7, DLS50 obtuvo un 0.47. 
 

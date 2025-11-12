@@ -111,10 +111,17 @@ Con e=n−1, resulta O(n d^3).
 
 5-
 Sin contar el algoritmo Random del tp4.
-El porcentaje de éxito en los algoritmos del tp4 era de aproximádamente 20%, mientras que la de los algoritmos del tp5 es del 100%. Siempre encuentra la solución. Y es notoria la diferencia. 
+El porcentaje de éxito en los algoritmos del tp4 era de aproximádamente 20%,![alt text](../tp4-busquedas-locales/images/success_metrics.svg) mientras que la de los algoritmos del tp5 es del 100%. Siempre encuentra la solución. Y es notoria la diferencia. 
 
-Ambos del tp5 exploran menos estados que los del tp4, FC explora aún menos que BT.
-
+Ambos del tp5 exploran menos estados que los del tp4, 
+![alt text](../tp4-busquedas-locales/images/states_metrics.svg)
+FC explora aún menos que BT.
+![alt text](images/boxplot_nodos_4.png)
+![alt text](images/boxplot_nodos_8.png)
+![alt text](images/boxplot_nodos_10.png)
 Los del tp5 son más rápidos en ejecución que los del tp4. FC es el más rápido de todos.
-
+![alt text](../tp4-busquedas-locales/images/time_metrics.svg)
+![alt text](images/boxplot_tiempos_4.png)
+![alt text](images/boxplot_tiempos_8.png)
+![alt text](images/boxplot_tiempos_10.png)
 En conclusión: Así como están implementados, la mejor elección es la de Forward Checking.
