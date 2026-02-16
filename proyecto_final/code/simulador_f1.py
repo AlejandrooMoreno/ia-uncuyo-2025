@@ -184,18 +184,52 @@ class F1Env:
         self.rival.neumaticos = np.clip(self.rival.neumaticos, 0, 100)
 
         # =========================================
-        # 4. RECOMPENSAS
+        # 4. SISTEMA DE RECOMPENSAS AVANZADO ("SHAPED REWARD")
         # =========================================
-        recompensa += (delta * 100) + recompensa_extra
-
-        # ADELANTAMIENTO
-        if self.gap_segundos <= 0:
-            return self._obtener_estado(), 1000, True, "OVERTAKE"
-
-        # PERDIDA DE RASTRO
-        #if self.gap_segundos > 2.5:
-            recompensa -= 5 
         
+        recompensa_total = 0.0
+
+        # A. RECOMPENSA POR RITMO (DELTA)
+        # Usamos una escala más agresiva. 
+        # Ganar 0.1s es MUY bueno (+10 pts). Perder 0.1s es MUY malo (-10 pts).
+        recompensa_total += delta * 100.0 
+
+        # B. RECOMPENSA POR POSICIONAMIENTO (DRS)
+        # Incentivamos mantener la presión.
+        if 0.0 < self.gap_segundos < 1.0:
+            recompensa_total += 2.0 # "Good job, you are in the kill zone"
+        
+        # D. BONO DE SUPERVIVENCIA
+        # Si la batería está crítica y decides ahorrar, te premio.
+        if self.agent.bateria < 10.0 and accion == 3: # Lift & Coast
+            recompensa_total += 5.0 # "Smart move, recharging"
+
+        # E. PENALIZACIONES DE FÍSICA (Que calculamos arriba)
+        recompensa_total += recompensa_extra # (Choques, bloqueadas, intentos fallidos)
+
+        # F. EVENTOS MAYORES
+        # 1. ADELANTAMIENTO (El Jackpot)
+        if self.gap_segundos <= 0:
+            recompensa_total += 2000 # Aumentamos el premio para que sea IRRESISTIBLE
+            return self._obtener_estado(), recompensa_total, True, "OVERTAKE"
+
+        # 2. PERDIDA DE CONTACTO (Game Over táctico)
+        # Si el rival se va a más de 3 segundos, la carrera está perdida en la práctica.
+        if self.gap_segundos > 3.0:
+            recompensa_total -= 50 # Castigo fuerte
+            # Opcional: self.game_over = True (Para cortar episodios malos rápido)
+        
+        # 3. CHOQUE (Game Over físico)
+        # Ya manejado arriba en la sección de seguridad, pero aseguramos
+        if self.game_over and "CRASH" in str(recompensa_extra): 
+             # Si ya detectamos choque arriba, la recompensa viene negativa de allá
+             pass 
+
+        # G. CASTIGO POR ABANDONO DE NEUMÁTICOS
+        # Si llegas al Cliff (<20%), castigo constante por cada metro que avances así.
+        if self.agent.neumaticos < 20:
+            recompensa_total -= 2.0 # "Box, Box! Tires are dead!".
+
         # AVANCE
         self.sector_index += 1
         if self.sector_index >= len(self.track):
@@ -204,7 +238,7 @@ class F1Env:
             if self.vuelta > 8: # Límite de vueltas para no eternizar
                 self.game_over = True
                 
-        return self._obtener_estado(), recompensa, self.game_over, "RACE"
+        return self._obtener_estado(), recompensa_total, self.game_over, "RACE"
 
     def _obtener_estado(self):
         """
